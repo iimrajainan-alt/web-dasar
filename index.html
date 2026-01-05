@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Koding</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+    <style>
+        body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        
+        /* MENU KIRI */
+        nav {
+            background-color: #2c3e50;
+            width: 280px; /* Agak lebaran dikit biar muat */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: white;
+            overflow-y: auto;
+            border-right: 5px solid #1abc9c;
+        }
+
+        /* Judul Kategori (Modul) */
+        .kategori {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #bdc3c7;
+            border-bottom: 1px solid #7f8c8d;
+            padding-bottom: 5px;
+        }
+        
+        /* Tombol File */
+        button {
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #ecf0f1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+
+        button:hover { background-color: #34495e; color: #1abc9c; padding-left: 20px; }
+        button:focus { background-color: #16a085; color: white; outline: none; }
+
+        /* KONTEN KANAN */
+        main {
+            flex: 1;
+            padding: 20px 40px;
+            overflow-y: auto;
+            background-color: #f4f4f4;
+        }
+
+        zero-md {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: block;
+            max-width: 900px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2 style="text-align: center; margin-top: 0;">📚 Gudang Ilmu</h2>
+
+        <div class="kategori">📂 Modul HTML</div>
+        <button onclick="gantiHalaman('modul-html/html.md')">📄 Dasar HTML</button>
+        <button onclick="gantiHalaman('modul-html/semantik.md')">🛡️ Semantik</button>
+        <button onclick="gantiHalaman('modul-html/interaktif.md')">🎮 Interaktif & Media</button>
+        <button onclick="gantiHalaman('modul-html/awesome.md')">🚩 Font Awesome</button>
+
+        <div class="kategori">📂 Modul CSS</div>
+        <button onclick="gantiHalaman('modul-css/cssUkuran.md')">📏 Satuan Ukuran</button>
+        <button onclick="gantiHalaman('modul-css/cssLayout.md')">🧱 Layouting</button>
+        <button onclick="gantiHalaman('modul-css/cssDesain.md')">🎨 Desain</button>
+        <button onclick="gantiHalaman('modul-css/cssAnimasi.md')">✨ Animasi</button>
+        <button onclick="gantiHalaman('modul-css/gradienDKK.md')">🌈 Gradien DKK</button>
+
+        <div class="kategori">📂 Modul JS</div>
+        <button onclick="gantiHalaman('modul-js/awalJS.md')">🧠 1. Otak & Logika</button>
+        <button onclick="gantiHalaman('modul-js/js-2.md')">🏗️ 2. DOM Manipulation</button>
+        <button onclick="gantiHalaman('modul-js/js-3.md')">📦 3. Gudang Data</button>
+        <button onclick="gantiHalaman('modul-js/js-4.md')">🚚 4. Storage & Async</button>
+        
+        <div class="kategori">⚙️ System</div>
+        <button onclick="gantiHalaman('.gitignore')">🔒 Lihat Gitignore</button>
+    </nav>
+
+    <main>
+        <zero-md id="layar-tancep" src="modul js/awalJS.md"></zero-md>
+    </main>
+
+    <script>
+        const gantiHalaman = (pathFile) => {
+            const layar = document.querySelector('#layar-tancep');
+            
+            // Tante tambahin log biar kalau error ketahuan salah alamatnya di mana
+            console.log(`Mencoba membuka file di alamat: ${pathFile}`);
+            
+            layar.setAttribute('src', pathFile);
+            
+            // Scroll ke atas otomatis pas ganti halaman
+            document.querySelector('main').scrollTop = 0;
+        };
+    </script>
+
+</body>
+</html>
