@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0f0e17;
+            font-family: sans-serif;
+            color: #a7a9be;
+        }
+        header {
+            border: 1px solid #fffffe;
+            background-color: #fffffe;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .main {
+            margin: 0 auto;
+            background-color: #fffffe;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 8px 8px 0px rgba(255, 137, 6, 1);
+        }
+        .pembungkus {
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            margin: 10px;
+            margin-bottom: 0;
+        }
+        .bungkus {
+            border: 1px solid #0f0e17;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .input {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 5px;
+            margin: 10px;
+            margin-top: 0;
+        }
+        #input-teks {
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            font-weight: 2rem;
+        }
+        button {
+            background-color: #ff8906;
+            color: #fffffe;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CRUD MANDIRI</h1>
+    </header>
+
+    <main class="main">
+        <div id ="tampilan">
+        </div>
+        <br>
+        <div class="input">
+            <input type="text" id="input-teks" placeholder="masukan text...">
+            <button id="tombol-input" style="cursor: pointer;">masukan</button>
+        </div>
+    </main>
+
+    <script>
+        //tangkap yang dimasukan user, masukan ke array, tampilkan ke layar + variasi//
+        let tampilTeks = document.getElementById("tampilan");
+        let input = document.getElementById("input-teks");
+        let tombol = document.getElementById("tombol-input");
+
+        let daftarHutang = [];
+
+        tombol.addEventListener("click", function(){
+
+            let namaHutang = input.value;
+
+            daftarHutang.push(namaHutang);
+
+            console.log("its ini my array-ku: ", daftarHutang);
+
+            input.value = "";
+
+            tampilkanKeLayar();
+        });
+
+        function tampilkanKeLayar(){
+
+            tampilTeks.innerHTML = "";
+
+            daftarHutang.forEach(function(item, index){
+
+                tampilTeks.innerHTML += `
+                    <div class="pembungkus">
+                        <div class="bungkus">
+                            ${index + 1}. ${item}
+                        </div>
+                        <div class="bungkus-dua">
+                            <button onclick="hapusData(${index})">hapus</button>
+                            <button onclick="editData(${index})">edit</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function hapusData(index) {
+            daftarHutang.splice(index, 1);
+
+            tampilkanKeLayar();
+            console.log("sisa hutang: ", daftarHutang);
+        }
+
+        function editData(index){
+            let namaBaru = prompt("Update nama teman:", daftarHutang[index]);
+            if (namaBaru){
+                daftarHutang[index] = namaBaru;
+                tampilkanKeLayar();
+                console.log("sisa update: ", daftarHutang);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dompet</title>
+    <style>
+        input, button {
+            padding: 6px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dompet digital</h1>
+
+    <input type="text" id="input-nama" placeholder="masukan nama barang..">
+    <input type="number" id="input-harga" placeholder="masukan harga barang...">
+    <br><br>
+    <button type="submit" id="tombol-tambah">Tambah</button>
+
+    <ul id="daftar-list">
+        <li>daftar nama</li>
+        <li>harga</li>
+    </ul>
+    
+    <div class="total" id="total">
+    </div>
+
+    <script>
+        let inputNama = document.getElementById("input-nama");
+        let inputHarga = document.getElementById("input-harga");
+        let tombol = document.getElementById("tombol-tambah");
+        let daftarList = document.getElementById("daftar-list");
+        let tampilan = document.getElementById("total");
+
+        let keranjang = [];
+
+        tombol.addEventListener("click", function(){
+            let nama = inputNama.value;
+            let harga = Number(inputHarga.value);
+
+            let itemBaru = {
+                namaBarang: nama,
+                hargaBarang: harga
+            };
+
+            keranjang.push(itemBaru);
+
+            console.log("isi keranjang:", keranjang);
+            console.log("Snapshot Keranjang:", [...keranjang]);
+            
+            tampilkanBelanjaan();
+
+            inputNama.value = "";
+            inputHarga.value = "";
+            inputNama.focus();
+        });
+        function tampilkanBelanjaan(){
+            daftarList.innerHTML = "";
+
+            let totalHarga = 0;
+
+            keranjang.forEach(function(item, index){
+                daftarList.innerHTML += `
+                    <li>
+                    ${index + 1}. ${item.namaBarang} - RP. ${item.hargaBarang}
+                    </li>
+                `;
+
+                totalHarga += item.hargaBarang;
+            });
+            let rupiah = totalHarga.toLocaleString('id-ID');
+            tampilan.innerHTML = "Total Pengeluaran: <b>Rp " + rupiah + "</b>";        
+        }
+    </script>
+</body>
+</html>
