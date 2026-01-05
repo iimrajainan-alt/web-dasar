@@ -69,6 +69,50 @@
             margin: 0 auto;
             min-height: 80vh;
         }
+        /* =========================================
+           MODE HP (Layar di bawah 768px)
+           ========================================= */
+        @media (max-width: 768px) {
+            
+            /* 1. Ubah Tata Letak: Dari Sebelahan (Row) jadi Tumpuk (Column) */
+            body {
+                flex-direction: column;
+                height: auto;      /* Biar panjang ke bawah mengikuti konten */
+                overflow: auto;    /* Kembalikan scroll normal browser */
+            }
+
+            /* 2. Navigasi: Pindah ke Atas & Melebar */
+            nav {
+                width: 100%;       /* Lebar penuh */
+                height: auto;      /* Tinggi secukupnya */
+                border-right: none;
+                border-bottom: 5px solid #1abc9c; /* Pindah garis ke bawah */
+                box-sizing: border-box; /* Biar padding gak bikin lebar jebol */
+                padding: 10px;
+                
+                /* Opsional: Biar menu gak kepanjangan, kita bikin scroll ke samping atau max-height */
+                max-height: 200px; /* Batasi tinggi menu biar gak menuhin layar */
+            }
+
+            /* 3. Judul Menu: Kecilin dikit */
+            nav h2 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            /* 4. Konten Utama: Sesuaikan padding */
+            main {
+                width: 100%;
+                padding: 15px;      /* Kurangi padding biar lega */
+                box-sizing: border-box;
+            }
+
+            /* 5. Kertas Markdown: Kecilin padding kertasnya */
+            zero-md {
+                padding: 15px;      /* Jangan boros tempat */
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 <body>

@@ -1,4 +1,4 @@
-# 📑 Rangkuman Anatomi Tag HTML (Versi Tante Galak)
+# 📑 Rangkuman Anatomi Tag HTML 
 
 > **Status:** Materi Dasar Web Dev
 > **Sumber:** MDN Web Docs & HTML Living Standard
