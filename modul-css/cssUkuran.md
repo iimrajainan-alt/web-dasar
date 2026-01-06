@@ -1,6 +1,6 @@
 # 📏 Kitab Suci CSS: Satuan Ukuran (Units)
 
-> **Pesan Tante:** Jangan semuanya pakai `px`! Dunia ini tidak selebar layar laptopmu doang.
+> **May Pesan:** Jangan semuanya pakai `px`! Dunia ini tidak selebar layar laptopmu doang.
 
 ## 1. Kubu Kaku (Absolute Units) 🗿
 Satuan yang nilainya TETAP, tidak peduli ukuran layar, tidak peduli settingan browser.

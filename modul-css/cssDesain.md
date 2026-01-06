@@ -1,6 +1,6 @@
 # 🎨 Kitab Suci CSS: Jurusan Desain Grafis (Visual)
 
-> **Filosofi Tante:** Web yang cantik itu web yang *readable* (mudah dibaca) dan *accessible* (nyaman di mata). Jangan norak!
+> **May Filosofi:** Web yang cantik itu web yang *readable* (mudah dibaca) dan *accessible* (nyaman di mata). Jangan norak!
 
 ## 1. Typography (Seni Mengolah Huruf) 🔤
 Ini paling vital. 90% isi web adalah teks. Kalau teksmu jelek, orang malas baca.
@@ -108,4 +108,4 @@ Pernah masukin gambar ke kotak tapi gambarnya jadi gepeng/penyet? Ini solusinya.
     * `cover`: **Paling Sakti!** Gambar akan di-zoom dan dipotong sedikit biar pas memenuhi kotak TANPA gepeng.
     * `contain`: Gambar mengecil biar muat seutuhnya (ada sisa ruang kosong).# 🎨 Kitab Suci CSS: Jurusan Desain Grafis (Visual)
 
-> **Filosofi Tante:** Web yang cantik itu web yang *readable* (mudah dibaca) dan *accessible* (nyaman di mata). Jangan norak!
+> **May Filosofi:** Web yang cantik itu web yang *readable* (mudah dibaca) dan *accessible* (nyaman di mata). Jangan norak!

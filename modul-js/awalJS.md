@@ -1,7 +1,7 @@
 # 🧠 JS Bagian 1: Otak & Logika (Fundamentals)
 
 > **Status:** Materi Wajib
-> **Peringatan Tante:** Ini adalah fondasi. Kalau bagian ini rapuh, aplikasimu bakal *buggy* seumur hidup.
+> **May Peringatan:** Ini adalah fondasi. Kalau bagian ini rapuh, aplikasimu bakal *buggy* seumur hidup.
 
 ---
 

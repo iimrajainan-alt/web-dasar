@@ -1,6 +1,6 @@
 # 🏗️ Kitab Suci CSS: Jurusan Tukang Bangunan (Layout)
 
-> **Peringatan Tante:** Ini adalah properti yang WAJIB dimengerti luar kepala. Jangan cuma copas, pahami logikanya!
+> **May Peringatan:** Ini adalah properti yang WAJIB dimengerti luar kepala. Jangan cuma copas, pahami logikanya!
 
 ## 1. The Box Model (Fondasi Rumah) 📦
 Setiap elemen HTML adalah kotak. Properti ini mengatur ukuran dan "daging" kotak tersebut.

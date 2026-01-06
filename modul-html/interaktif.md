@@ -1,6 +1,6 @@
 # 🎮 Kasta Interaktif & Media: Bikin Web Hidup
 
-> **Prinsip Tante:** Website itu komunikasi dua arah. Jangan cuma nyuruh user baca, kasih mereka cara buat nonton, dengar, dan ngirim data.
+> **May Prinsip:** Website itu komunikasi dua arah. Jangan cuma nyuruh user baca, kasih mereka cara buat nonton, dengar, dan ngirim data.
 
 ---
 
@@ -119,5 +119,5 @@ Coba terapkan ini di proyek Dompet-mu:
 </form>
 ```
 
-> **Ingat Pesan Tante:**
+> **Ingat May Pesan:**
 > Selalu pasangkan `<input>` dengan `<label>` biar user tahu itu kotak buat ngisi apa. Jangan biarkan user menebak-nebak!

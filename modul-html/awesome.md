@@ -1,6 +1,6 @@
 # 🚩 Font Awesome vs SVG Murni
 
-> **Prinsip Tante:** Font Awesome itu untuk *kecepatan*. SVG Murni itu untuk *performa* dan *kustomisasi*.
+> **May Prinsip:** Font Awesome itu untuk *kecepatan*. SVG Murni itu untuk *performa* dan *kustomisasi*.
 
 ---
 
@@ -74,7 +74,7 @@ Cari nama ikon di situs web Font Awesome, lalu taruh di elemen `<i>`.
 
 ---
 
-> **Peringatan Tante:**
+> **Peringatan:**
 > Kalau web "Dompet" kamu nanti cuma butuh **3 biji ikon** (misal cuma ikon menu hamburger), **JANGAN PAKAI FONT AWESOME**.
 > Mubazir! Kamu download library ratusan KB cuma buat 3 ikon. Mending pakai SVG murni kalau ikonnya sedikit.
 > Pakai Font Awesome kalau ikonmu BANYAK dan beragam.

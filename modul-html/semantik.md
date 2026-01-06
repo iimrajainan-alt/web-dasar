@@ -1,6 +1,6 @@
 # 🛡️ Anatomi HTML Semantik (Biar Disayang Google)
 
-> **Prinsip Tante:** Jangan pakai `<div>` kalau ada tag yang lebih spesifik. `<div>` itu cuma opsi terakhir (darurat).
+> **May Prinsip:** Jangan pakai `<div>` kalau ada tag yang lebih spesifik. `<div>` itu cuma opsi terakhir (darurat).
 
 ---
 

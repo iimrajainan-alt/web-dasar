@@ -1,7 +1,7 @@
 # 🎨 Kitab Visual Efek: Gradient, Shadow & Glass (+ Penjelasan Logika)
 
 > **Status:** Bedah Anatomi CSS
-> **Prinsip Tante:** Jangan cuma hafal kodenya, pahami bagaimana browser "melukis" pikselnya.
+> **May Prinsip:** Jangan cuma hafal kodenya, pahami bagaimana browser "melukis" pikselnya.
 
 ---
 
