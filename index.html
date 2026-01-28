@@ -9,8 +9,6 @@
 
     <style>
         body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; overflow: hidden; }
-        
-        /* MENU KIRI */
         nav {
             background-color: #2c3e50;
             width: 280px; /* Agak lebaran dikit biar muat */
@@ -22,8 +20,6 @@
             overflow-y: auto;
             border-right: 5px solid #1abc9c;
         }
-
-        /* Judul Kategori (Modul) */
         .kategori {
             margin-top: 20px;
             margin-bottom: 5px;
@@ -34,8 +30,6 @@
             border-bottom: 1px solid #7f8c8d;
             padding-bottom: 5px;
         }
-        
-        /* Tombol File */
         button {
             padding: 10px 15px;
             background-color: transparent;
@@ -47,18 +41,14 @@
             transition: 0.2s;
             font-size: 0.95rem;
         }
-
         button:hover { background-color: #34495e; color: #1abc9c; padding-left: 20px; }
         button:focus { background-color: #16a085; color: white; outline: none; }
-
-        /* KONTEN KANAN  */
         main {
             flex: 1;
             padding: 20px 40px;
             overflow-y: auto;
             background-color: #f4f4f4;
         }
-
         zero-md {
             background: white;
             padding: 40px;
@@ -69,47 +59,33 @@
             margin: 0 auto;
             min-height: 80vh;
         }
-        /* =========================================
-           MODE HP (Layar di bawah 768px)
-           ========================================= */
         @media (max-width: 768px) {
-            
-            /* 1. Ubah Tata Letak: Dari Sebelahan (Row) jadi Tumpuk (Column) */
             body {
                 flex-direction: column;
-                height: auto;      /* Biar panjang ke bawah mengikuti konten */
-                overflow: auto;    /* Kembalikan scroll normal browser */
+                height: auto;      
+                overflow: auto;    
             }
-
-            /* 2. Navigasi: Pindah ke Atas & Melebar */
             nav {
-                width: 100%;       /* Lebar penuh */
-                height: auto;      /* Tinggi secukupnya */
+                width: 100%;       
+                height: auto;      
                 border-right: none;
-                border-bottom: 5px solid #1abc9c; /* Pindah garis ke bawah */
-                box-sizing: border-box; /* Biar padding gak bikin lebar jebol */
+                border-bottom: 5px solid #1abc9c; 
+                box-sizing: border-box; 
                 padding: 10px;
                 
-                /* Opsional: Biar menu gak kepanjangan, kita bikin scroll ke samping atau max-height */
-                max-height: 200px; /* Batasi tinggi menu biar gak menuhin layar */
+                max-height: 200px; 
             }
-
-            /* 3. Judul Menu: Kecilin dikit */
             nav h2 {
                 font-size: 1rem;
                 margin-bottom: 10px;
             }
-
-            /* 4. Konten Utama: Sesuaikan padding */
             main {
                 width: 100%;
-                padding: 15px;      /* Kurangi padding biar lega */
+                padding: 15px;      
                 box-sizing: border-box;
             }
-
-            /* 5. Kertas Markdown: Kecilin padding kertasnya */
             zero-md {
-                padding: 15px;      /* Jangan boros tempat */
+                padding: 15px;      
                 min-height: auto;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             }
@@ -151,12 +127,10 @@
         const gantiHalaman = (pathFile) => {
             const layar = document.querySelector('#layar-tancep');
             
-            // Tante tambahin log biar kalau error ketahuan salah alamatnya di mana
             console.log(`Mencoba membuka file di alamat: ${pathFile}`);
             
             layar.setAttribute('src', pathFile);
             
-            // Scroll ke atas otomatis pas ganti halaman
             document.querySelector('main').scrollTop = 0;
         };
     </script>
